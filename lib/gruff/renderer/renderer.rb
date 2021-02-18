@@ -61,8 +61,8 @@ module Gruff
 
     # Make a new image at the current size with a solid +color+.
     def solid_background(columns, rows, color)
-      Magick::Image.new(columns, rows) do
-        self.background_color = color
+      Magick::Image.new(columns, rows) do |image|
+        image.background_color = color
       end
     end
 
